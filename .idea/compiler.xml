@@ -11,5 +11,10 @@
         <module name="thymeleaf-basic.main" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="form" target="11" />
+      <module name="form.main" target="11" />
+      <module name="form.test" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
