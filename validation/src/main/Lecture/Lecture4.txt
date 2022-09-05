@@ -34,3 +34,45 @@
         #fields로 접근 가능
         th:error: 해달 필드에 오류가 있는 경우 출력 th:if의 편의버전
         th:errorclass: th:field에서 지정한 필드에 오류가 있으면 class정보를 추가한다.
+
+    BindingResult2
+        ★스프링이 제공하는 검증 오류를 보관하는 객체!!!
+        BindingResult가 없으면 에러페이지로 넘어가버리고(컨트롤러 호출이 안된다), 있으면 컨트롤러가 호출이 된다.
+        오류 결과를 가진채로 호출이 되는것
+
+        BindingResult에 검증 오류를 적용하는 3가지 방법
+        1. 타입오류 등으로 바인딩 실패하는 경우 FieldError 생성해서 BindingResult에 담아준다.
+        2. 개발자가 직접 넣어줄 수 있다.
+        3. Validator 사용
+
+        두가지오류로 구분가능
+        1. 바인딩 자체가 실패
+        2. 비즈니스로직과 관련된 검증 오류
+
+        Errors 인터페이스를 상속받은 BindingResult
+        실제로 넘어오는 구현체는 BeanPropertyBindingResult인데 두개의 인터페이스를 모두 구현하였으므로 BindingResult대신에 errors를 써도 되지만 기능이 부족
+
+        그런데 입력해놓은값이 잘못되어서 redirect가 됬을때 입력해놓은값, 데이터가 유지가 안된다.
+        유지하려면은???
+        FieldError와 ObjectError를 사용하면 된다.
+
+    FieldError, ObjectError
+        사용자 입력 오류 메시지가 화면에 남도록하자!
+        FieldError와 ObjectError의 관계는 ???
+
+        th:field="*{price}" 는 오류가있으면 fieldError 에서 값을 가져온다. 오류가 없으면 모델 객체에 있는 값을 사용한다.
+
+    오류 코드와 메시지 처리 1
+        오류 메시지를 일관성 있게 관리해보자.
+
+        rejectedValue : 바인딩 실패한 값(사용자가 입력한 값, 거절된 값)
+
+        errorCode와 arguments를 활용해서 오류메시지를 구분한다.
+
+        properties 파일을 만들어서 오류를 코드화!
+
+        메시지 소스를 자동으로 찾아서 조회한다. key, value로 불러온다. 그러니까 당연히 국제화도 가능!
+
+    오류 코드와 메시지 처리 2
+
+
