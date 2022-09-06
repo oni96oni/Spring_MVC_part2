@@ -1,0 +1,14 @@
+검증 2 - Bean Validation
+    Bean Validation  - 소개
+        검증기능을 매번 코드로 작성하는 것은 번거롭다 -> 애너테이션을 활용해보자!!
+
+        @NotBlank : 공백x, empty여도 안된다.
+        @Range : 범위 (min : 최소, max : 최대 )
+        @NotNull : empty안된다.
+
+        Bean Validation은 특정한 구현체가 아니라 기술표준이다.
+        즉, 검증 애노테이션과 여러 인터페이스의 모음이다.
+
+        많은 애노테이션을 읽고 작동시킬 구현체가 필요
+
+    Bean Validation - 시작
