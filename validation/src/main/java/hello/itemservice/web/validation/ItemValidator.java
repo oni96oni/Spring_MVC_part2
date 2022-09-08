@@ -22,7 +22,6 @@ public class ItemValidator implements Validator {
         Item item = (Item) target;
 
         // errors는 bindingresult의 부모클래스여서 매개변수에 넣어줄 수가 있었다. 다형성때문에! errors의 자식이 result니까 부모는 자식을 담을 수 있다.
-
         if (!StringUtils.hasText(item.getItemName())) {
             errors.rejectValue("itemName", "required");
         }
@@ -34,6 +33,7 @@ public class ItemValidator implements Validator {
             errors.rejectValue("quantity", "max", new Object[]{9999}, null);
         }
 
+        // 특정 필드가 아닌 복합 룰 검증
         if(item.getPrice() != null && item.getQuantity() != null) {
             int resultPrice = item.getPrice() * item.getQuantity();
             if(resultPrice < 10000) {
