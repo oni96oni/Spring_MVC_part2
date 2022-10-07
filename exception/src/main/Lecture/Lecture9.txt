@@ -7,3 +7,18 @@ API 예외 처리
         exception에 있는 정보를 출력해보았다.
 
     스프링 부트 기본 오류 처리
+        BasicError 그대로 이어서 사용가능하다.
+
+        예외가 터지면 서블릿까지 올라가고 기본오류페이지 슬래시에러를 등록해놓는다는것을 기억해야한다.
+
+        json형식으로 오류를 보내준다.
+
+        ResponseEntity는 응답바디에다가 값을 바로 담아서 넣어주는것, html같은것에다가
+
+        Html 페이지 vs API 오류
+            html은 BasicErrorController로 처리,
+            api는 @ExceptionHandler가 더 나은 방법
+
+        API는 400,500에러를 보여주는것 보다 매우 세밀하고 복잡하다!!
+
+    HandlerExceptionResolver 시작
