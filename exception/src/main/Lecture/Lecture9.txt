@@ -22,3 +22,13 @@ API 예외 처리
         API는 400,500에러를 보여주는것 보다 매우 세밀하고 복잡하다!!
 
     HandlerExceptionResolver 시작
+        발생하는 예외에 따라서 500을 400번대로도 바꾸고 싶다. 그럴때 사용하는것이 HandlerExceptionResolver이다.
+
+        예외가 디스페쳐서블릿에 전달되었을때 ExceptionResolver가 있으면 여길로 전달을 받아서 예외 해결을 시도한다.
+
+        1. 예외상태코드 변환에 사용
+        2. 뷰 템플릿 처리
+        3. API 응답 처리
+
+    HandlerExceptionResolver 활용
+
