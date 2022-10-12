@@ -31,4 +31,10 @@ API 예외 처리
         3. API 응답 처리
 
     HandlerExceptionResolver 활용
-    커밋테스트
+        에러가 왔다갔다 하면서 너무 복잡해진다. 그래서 exceptionHandler에서 끝을낸다!
+
+        서블릿 컨테이너까지 예외가 올라가면 복잡하고 지저분한 추가 프로세스가 실행된다. 예를들어 어떤???
+
+        직접 ExceptionResolver를 구현하는것은 복잡 스프링이 제공하는 솔루션을 살펴보자
+
+    스프링이 제공하는 ExceptionResolver1
