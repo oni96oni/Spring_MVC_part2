@@ -38,3 +38,14 @@ API 예외 처리
         직접 ExceptionResolver를 구현하는것은 복잡 스프링이 제공하는 솔루션을 살펴보자
 
     스프링이 제공하는 ExceptionResolver1
+        스프링부트가 기본적으로 제공해준다.
+        3가지가 순서대로 처리
+        1. ExceptionHandlerExceptionResolver 중요!!! 후에 따로 기술, API 예외 처리는 대부분 이기능으로 해결!
+        2. ResponseStatusExceptionResolver, HTTP 상태 코드를 지정
+        3. DefaultHandlerExceptionResolver, 스프링 내부 기본 예외를 처리한다.
+
+        ResponseStatusExceptionResolver status 를 지정해준다.
+
+        에러가 터지면 2번이 본다. 얘가 처리를 하면서 @ResponseStatus를 본다. 그리고 status를 지정해준다.
+
+    스프링이 제공하는 ExceptionResolver2
