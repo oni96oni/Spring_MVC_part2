@@ -49,3 +49,24 @@ API 예외 처리
         에러가 터지면 2번이 본다. 얘가 처리를 하면서 @ResponseStatus를 본다. 그리고 status를 지정해준다.
 
     스프링이 제공하는 ExceptionResolver2
+
+    @ExceptionHandler
+        가장 중요!
+
+        웹브라우저에서 HTML화면 요청시에는 BasicErrorController가 처리한다.
+        API 요청시에는 @ExceptionHandler가 처리한다.
+
+        @ExceptionHandler 애노테이션을 선언하고 해당컨트롤러에서 처리하고 싶은 예외를 지정해주면 된다.
+        지정한 예외 또는 그 예외의 자식클래스 모두 잡을 수 있다.
+
+        스프링 컨트롤러처럼 만들어 놓아서 다양한 경우에 사용가능하다.
+
+    @ControllerAdvice
+        예외코드와 정상코드를 분리할수있게 도와주는것!
+
+        여러 컨트롤러에서 있는 에러처리 메서드들을 한군데 다 모은다. aop를 컨트롤러에 적용하는 느낌
+
+    정리
+        html페이지는 4xx, 5xx 번호마다 페이지 만들어놓으면 오류처리하는데 이상 없다.
+        문제는 api, application/JSON일때 오류처리하는법도 알아보았다.
+
