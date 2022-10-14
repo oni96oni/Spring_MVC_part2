@@ -7,6 +7,7 @@
     <file type="web" url="file://$PROJECT_DIR$/login" />
     <file type="web" url="file://$PROJECT_DIR$/message" />
     <file type="web" url="file://$PROJECT_DIR$/thymeleaf-basic" />
+    <file type="web" url="file://$PROJECT_DIR$/typeconverter" />
     <file type="web" url="file://$PROJECT_DIR$/validation" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="11" project-jdk-type="JavaSDK" />

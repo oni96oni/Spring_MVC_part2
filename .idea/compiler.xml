@@ -8,13 +8,19 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.24/13a394eed5c4f9efb2a6d956e2086f1d81e857d9/lombok-1.18.24.jar" />
         </processorPath>
-        <module name="exception.main" />
+        <module name="typeconverter.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="exception" target="11" />
+      <module name="exception.main" target="11" />
+      <module name="exception.test" target="11" />
       <module name="form" target="11" />
       <module name="form.main" target="11" />
       <module name="form.test" target="11" />
+      <module name="login" target="11" />
+      <module name="login.main" target="11" />
+      <module name="login.test" target="11" />
       <module name="message" target="11" />
       <module name="message.main" target="11" />
       <module name="message.test" target="11" />

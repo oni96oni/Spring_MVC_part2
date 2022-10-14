@@ -5,10 +5,10 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/exception" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/typeconverter" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/exception" />
+            <option value="$PROJECT_DIR$/typeconverter" />
           </set>
         </option>
       </GradleProjectSettings>
