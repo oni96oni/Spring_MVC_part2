@@ -1,0 +1,50 @@
+파일 업로드
+    서블릿과 파일 업로드1
+        application.properties에서 설정
+
+        logging.level.org.apache.coyote.http11=DEBUG
+        이걸 넣어주어야 http메세지를 서버에서 로그를 다 남겨서 우리가 볼 수 있다.
+
+        spring.servlet.multipart.enabled=false
+        이상태로 되어 있으면 멀티파트와 관련된 처리를 하지 않는다.
+
+        MultipartFile이 더 많이 쓰인다. MultipartHttpServletRequest 보다!!
+
+        DispatcherServlet에서는 doDispatch()가 가장 중요
+
+    서블릿과 파일 업로드2
+        @Value("${file.dir}") 이렇게 쓰면 application.properties에 있는 값을 그대로 가져올 수 있다.
+
+        parts 들도 헤더와 바디로 구분된다.
+
+        서블릿이 제공하는 Part는 편하지만 HttpServletRequest를 사용해야하고, 파일부분만 구분하려면 여러 추가 코드 필요한 단점
+
+        스프링에서는 어떻게 기능을 제공할까?
+
+    스프링과 파일 업로드
+        서블릿 보다 매우 짧아진 코드
+
+        HTML Form의 name에 맞추어 @RequestParam을 적용하면 된다.
+
+    예제로 구현하는 파일 업로드, 다운로드
+
+        구현
+
+    정리
+        HTML폼 전송방식의 차이를 이해!
+
+        multipart-form-data vs application/x-www-form-urlencoded
+
+        각 Part마다 헤더와 바디를 가진다.
+
+        서블릿은 MultiPart를 지원한다.
+
+        멀티파트 사용시 옵션설정 주의
+
+        스프링은 MultipartFile을 지원한다.
+
+        이미지를 보여줄때 UrlResource라는 걸로 바이너리데이터를 웹브라우저에 전송
+
+        다운로드 할때는 contentDisposion을 사용해서 파일이름을 지정해준다. 이 파일네임으로 다운받게 된다.
+
+다음으로
